@@ -1,0 +1,9 @@
+#calc-container {
+    background-color: rgb(78, 78, 78);
+    
+}
+
+#calc-display {
+    border: 2px solid rebeccapurple;
+    background-color: aliceblue;
+}

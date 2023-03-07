@@ -1,3 +1,15 @@
+
+
+
+
+
+
+
+
+
+
+// calculator functions
+
 function add(n1, n2){
     let total = n1 + n2;
     return total;
