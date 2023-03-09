@@ -1,9 +1,44 @@
+#calculator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 #calc-container {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
     background-color: rgb(78, 78, 78);
-    
+    padding: 10px 15px 10px 15px;
+    height: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 
 #calc-display {
+    display: flex;
+    border-radius: 8px;
     border: 2px solid rebeccapurple;
     background-color: aliceblue;
+    flex-direction: row;
+    height: 20%;
+    width: 100%
+}
+
+.buttons {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 20% 20% 20% 20%;
+    width: 100%;
+    height: 20px;
+}
+
+button {
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.clicked-down{
+    color: blue;
 }
