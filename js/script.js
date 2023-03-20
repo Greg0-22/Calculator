@@ -37,17 +37,24 @@ buttons.addEventListener('click', function(event){
         }
 
         // . AC = decimal, clear, equals buttons
-        if(action == 'decimal'){
+        if(action === 'decimal'){
             if(!displayNum.includes('.')){
                 display.textContent = displayNum + '.'
-            };
+            } else if(displayNum.includes('.') && previousButtonType === 'operator'){
+                display.textContent = '0.'
+            }
         }
 
         if(action == 'clear'){
             console.log('clear');
+            calculator.dataset.operator = '';
+            calculator.dataset.firstValue = '';
+            calculator.dataset.previousButtonType = ''
+            display.textContent = 0;
         }
 
         if(action == 'equals'){
+            calculator.dataset.previousButtonType = 'operator'
             const firstValue = calculator.dataset.firstValue
             const operator = calculator.dataset.operator
             const secondValue = displayNum
